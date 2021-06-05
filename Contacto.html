@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Contacto, Atencion">
     <title>Algorand - Contacto</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
 </head>
@@ -27,33 +27,47 @@
         </nav>
         </section>
     </header>
-
-    <h1 class="h1">Contacto</h1> 
+    
+    <main>
+        <h1 class="h1">Contacto</h1> 
         <h3>Queremos saber mas de vos</h3> 
-    <form>
-        <fieldset>
-            <legend><h4>Dejanos tus datos</h4></legend>
-            <label>Nombre
-                <input type="text" name="Nombre">
-            </label>
-            <br>
-            <label>Apellido
-                <input type="text" name="Apellido">
-            </label>
-            <br>
-            <div>Te podemos contactar telefonicamente?</div>
-            <input type="checkbox" name="si" value="1"/>
-            <p>Franja horaria</p>
-            <select name="Franja horaria">
-                <option value=A>Mañana (08 a 12 Hs)</option>
-                <option value=A>Tarde (12 a 18 Hs)</option>
-                <option value=A>Noche (18 a 22 Hs)</option>
-            <input type=reset value="Borrar">
-            <input type="submit" value="Enviar">
-        </fieldset>
-    </form>
+        <form>
+            <fieldset>
+                <legend><h4>Dejanos tus datos</h4></legend>
+                <label>Nombre
+                    <input type="text" name="Nombre">
+                </label>
+                <label>Apellido
+                    <input type="text" name="Apellido">
+                </label>
+                <div>Te podemos contactar telefonicamente?</div>
+                <input type="checkbox" name="si" value="1"/>
+                <p>Franja horaria</p>
+                <select name="Franja horaria">
+                    <option value=A>Mañana (08 a 12 Hs)</option>
+                    <option value=A>Tarde (12 a 18 Hs)</option>
+                    <option value=A>Noche (18 a 22 Hs)</option>
+                <input type=reset value="Borrar">
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+    </main>
+
     <footer class="foot">
-        <p>®2021 Todos los derechos reservados, Algorand Team™</p>   
+        <div class="ubicacion"></div>
+            <p>Av. 9 de Julio 2710, C.A.B.A.
+            Buenos Aires
+            Argentina</p>
+        </div>
+        <div class="redes">
+            <p>Seguinos!</p>
+            <a title="instagram" href="https://www.instagram.com/algorandofficial"><img src="imagenes/ig.png" alt="instagram" width="40" height="40"></a>
+            <a title="twitter" href="https://twitter.com/Algorand"><img src="imagenes/tw.png.crdownload" alt="twitter" width="40" height="40"></a>
+            <a title="youtube" href="https://youtube.com/algorand"><img src="imagenes/yt.png" alt="youtube" width="40" height="40"></a>
+        </div>
+        <div class="rights">
+            <p>®2021 Todos los derechos reservados, Algorand Team™</p>
+        </div>
     </footer>
 </body>
 </html>
