@@ -8,7 +8,9 @@ $subtitulos: #002b5c;
 $parrafos: #486353; 
 $margen: 120px;
 
-#grilla {
+/*grillas*/
+
+#grilla{
     display: grid;
     grid-template-areas: 
     "header"
@@ -17,35 +19,50 @@ $margen: 120px;
     "stacking"
     "tabla"
     "precio"
-    "carousel"
     "footer";
     grid-template-columns: 100%;
-    grid-template-rows: 1% 15% 9% 32% 15% 10% auto 5%;
+    grid-template-rows: 1% 17% 11% 37% 25% 10% 2%;
+}
+
+#Billetera{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "billetera"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 7% 79% 3%;
+}
+
+#contacto{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "formulario"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 8% 77% 2%;
 }
 
 /*estilos header*/
 
 header{
     grid-area: header;
-    height: 45px;
+    height: 40px;
     background-color: rgba(192, 192, 192, 0.589);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header__encabezado{
-    display: flex;
-    margin-left: 7px;
-    margin-top: 7px;
-}
-
-.header__menu{
-    display: flex;
-    flex-direction: row;
+.logo{
+    margin-left: 5px;
 }
 
 ul{
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    margin-top: 3px;
 }
 
 li a{
@@ -141,9 +158,7 @@ h3{
     margin: 5px 0px 5px 0px;
 }
 
-table{
-    color: rgb(248, 92, 74);
-    background-color: white;
+.table-responsive{
     grid-area: tabla;
     margin-left: auto;
     margin-right: auto;
@@ -151,31 +166,39 @@ table{
     animation-name: aparecer;
 }
 
-.precio{
-    grid-area: precio;
-    margin-top: 20px;
-    margin-bottom: 50px;
+.table{
+    background-color: #e7e7e7b0;
 }
 
-.btnPrecio{
+.precio{
+    grid-area: precio;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    animation-duration: 6s;
+    animation-name: aparecer;
+}
+
+.btn{
     color: black;
     background-color: rgba(221, 221, 221, 0.548);
-    padding: 50px;
+    padding: 5px;
+    border-radius: 8px;
 }
 
 .cmc{
     text-decoration: none;
 }
 
+/*Estilos seccion equipo*/
 
 .carouselSlide{
     grid-area: carousel;
-    max-width: 250px;
+    max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
 }
-
-/*Estilos seccion equipo*/
 
 .micali{
     display: flex;
@@ -234,30 +257,34 @@ table{
 
 /*estilos seccion Soporte*/
 
-.grid{
-    background-color: rgba(221, 221, 221, 0.548);
-    height: 40px;
-}
-
 .soporte__imagen{
-    margin-top: 20px;
+    margin-top: 29px;
     margin-bottom: 20px;
 }
 
 /*estilos seccion Billetera*/
 
 .wallet__imagen{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-left: auto;
+    margin-top: 28px;
+    margin-right: auto;
 }
 
 .text{
     color: rgb(80, 9, 80);
 }
 
+/*estilos seccion contacto*/
+
+.formulario{
+    margin-top: 60px;
+    margin-bottom: 185px;
+    grid-area: formulario;
+}
+
 /*efectos*/
 
-@keyframes aparecer {
+@keyframes aparecer{
     0% { 
         opacity: 0;
     }
@@ -288,13 +315,23 @@ table{
 /*footer*/
 
 footer{
-    text-align: center;
+    display: flex;
+    flex-direction: row;
     grid-area: footer;
     margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
     height: 90px;
     color:black;
     background-image: linear-gradient(rgb(245, 244, 244), rgb(128, 128, 128));
 }
+
+.ubicacion{
+    margin-left: 40px;
+}
+
+
+.rights{
+    margin-right: 80px;
+}
+

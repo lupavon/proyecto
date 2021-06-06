@@ -2,31 +2,41 @@
   margin: 0;
   padding: 0; }
 
+/*grillas*/
 #grilla {
   display: grid;
-  grid-template-areas: "header" "intro" "blockchain" "stacking" "tabla" "precio" "carousel" "footer";
+  grid-template-areas: "header" "intro" "blockchain" "stacking" "tabla" "precio" "footer";
   grid-template-columns: 100%;
-  grid-template-rows: 1% 15% 9% 32% 15% 10% auto 5%; }
+  grid-template-rows: 1% 17% 11% 37% 25% 10% 2%; }
+
+#Billetera {
+  display: grid;
+  grid-template-areas: "header" "billetera" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 7% 79% 3%; }
+
+#contacto {
+  display: grid;
+  grid-template-areas: "header" "formulario" "footer";
+  grid-template-columns: 100%;
+  grid-template-rows: 8% 77% 2%; }
 
 /*estilos header*/
 header {
   grid-area: header;
-  height: 45px;
-  background-color: rgba(192, 192, 192, 0.589); }
-
-.header__encabezado {
+  height: 40px;
+  background-color: rgba(192, 192, 192, 0.589);
   display: flex;
-  margin-left: 7px;
-  margin-top: 7px; }
+  justify-content: space-between;
+  align-items: center; }
 
-.header__menu {
-  display: flex;
-  flex-direction: row; }
+.logo {
+  margin-left: 5px; }
 
 ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end; }
+  margin-top: 3px; }
 
 li a {
   display: flex;
@@ -107,35 +117,41 @@ h3 {
   color: #002b5c;
   margin: 5px 0px 5px 0px; }
 
-table {
-  color: #f85c4a;
-  background-color: white;
+.table-responsive {
   grid-area: tabla;
   margin-left: auto;
   margin-right: auto;
   animation-duration: 6s;
   animation-name: aparecer; }
 
+.table {
+  background-color: #e7e7e7b0; }
+
 .precio {
   grid-area: precio;
-  margin-top: 20px;
-  margin-bottom: 50px; }
+  margin-top: 10px;
+  margin-bottom: 10px;
+  animation-duration: 6s;
+  animation-name: aparecer; }
 
-.btnPrecio {
+.btn {
   color: black;
   background-color: rgba(221, 221, 221, 0.548);
-  padding: 50px; }
+  padding: 5px;
+  border-radius: 8px; }
 
 .cmc {
   text-decoration: none; }
 
+/*Estilos seccion equipo*/
 .carouselSlide {
   grid-area: carousel;
-  max-width: 250px;
+  max-width: 300px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 100px; }
 
-/*Estilos seccion equipo*/
 .micali {
   display: flex;
   justify-content: space-between;
@@ -183,21 +199,24 @@ table {
   margin-left: 50px; }
 
 /*estilos seccion Soporte*/
-.grid {
-  background-color: rgba(221, 221, 221, 0.548);
-  height: 40px; }
-
 .soporte__imagen {
-  margin-top: 20px;
+  margin-top: 29px;
   margin-bottom: 20px; }
 
 /*estilos seccion Billetera*/
 .wallet__imagen {
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-left: auto;
+  margin-top: 28px;
+  margin-right: auto; }
 
 .text {
   color: #500950; }
+
+/*estilos seccion contacto*/
+.formulario {
+  margin-top: 60px;
+  margin-bottom: 185px;
+  grid-area: formulario; }
 
 /*efectos*/
 @keyframes aparecer {
@@ -216,12 +235,18 @@ table {
 
 /*footer*/
 footer {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
   grid-area: footer;
   margin-top: 20px;
-  display: flex;
-  justify-content: space-around;
   align-items: center;
+  justify-content: space-between;
   height: 90px;
   color: black;
   background-image: linear-gradient(#f5f4f4, gray); }
+
+.ubicacion {
+  margin-left: 40px; }
+
+.rights {
+  margin-right: 80px; }
